@@ -1,0 +1,35 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+  
+   "name":"O que compra a sua hora?",
+   "short_name":"mais valia",
+   "description":"Converte preços mostrados em quantas horas do seu tempo. Passar o mouse revela valor em reais",
+   "version":"0.0.1",
+   "icons":{  
+      "16":"icon.png",
+      "48":"icon.png",
+      "128":"icon.png"
+   },
+   "manifest_version":2,
+   "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup":"index.html"
+   },
+   "permissions": [
+    "tabs", "*://*/*"
+   ],
+   "background": {
+    "scripts": ["background.js"]
+   },
+   "content_scripts":[  
+      {  
+         "matches":[  
+            "*://*/*"
+         ],
+         "css":[
+            "style.css"
+         ],
+         "run_at":"document_end"
+      }
+   ]
+}
