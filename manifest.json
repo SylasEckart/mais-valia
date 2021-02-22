@@ -1,33 +1,32 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
+   "update_url": "https://www.google.com",
   
-   "name":"O que compra a sua hora?",
-   "short_name":"mais valia",
+   "name":"Mais-valia",
+   "short_name":"mais-valia",
    "description":"Converte preços mostrados em quantas horas do seu tempo. Passar o mouse revela valor em reais",
-   "version":"0.0.1",
+   "version":"0.1.0",
    "icons":{  
-      "16":"icon.png",
-      "48":"icon.png",
-      "128":"icon.png"
+      "16":"img/icon-16.png",
+      "48":"img/icon-48.png",
+      "128":"img/icon-128.png"
    },
    "manifest_version":2,
    "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup":"index.html"
+    "default_icon": "img/icon.png",
+    "default_popup": "index.html"
    },
-   "permissions": [
-    "tabs", "*://*/*"
-   ],
+   "permissions": ["activeTab","tabs","storage"],
+   "options_page": "mais-valia.html",
    "background": {
     "scripts": ["background.js"]
    },
    "content_scripts":[  
       {  
          "matches":[  
-            "*://*/*"
+            "*://*/mais-valia.html"
          ],
          "css":[
-            "style.css"
+            "css/style.css"
          ],
          "run_at":"document_end"
       }

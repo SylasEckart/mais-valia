@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
-    <script src="index.js"></script>
+  <meta charset="UTF-8">
+  <script src="js/index.js"></script> 
 </head>
 <body>
-    <div>
-        <input type="radio" id="porcentagem" name="salario" value="porcentagem"
-               checked>
-        <label for="porcentagem">Porcentagem</label>
-      </div>
-      
-      <div>
-        <input type="radio" id="horas" name="salario" value="horas">
-        <label for="horas">Horas</label>
-      </div>
+  <div class="wrapper" style="width:150px;">
+    <input type="radio" id="on" name="type" value="ligado" checked>
+    <label for="on">Ligado</label><br>
+    
+    <input type="radio" id="off" name="type" value="desligado">
+    <label for="off">Desligado</label><br>
+    
+    <p class="texto">Clique com o direito e em opções para alterar valores de horas e de salário</p>
+  </div>
+   
 </body>
 </html>
