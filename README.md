@@ -13,3 +13,24 @@
 
 - [ ] Separar código de webscraping
 - [ ] Código de horas
+
+
+
+## Executando:
+
+
+Para executar acesse: 
+
+```
+chrome://extensions/
+```
+
+Ative o modo desenvolvedor no canto superior direito
+
+Carregue o projeto:
+
+```
+Load unpacked
+```
+
+Selecione a pasta do projeto.
